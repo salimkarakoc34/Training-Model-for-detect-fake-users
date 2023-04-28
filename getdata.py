@@ -94,7 +94,7 @@ time.sleep(random_number)
 bio =driver.find_element(By.ID, 'o-1868991261') #bios information
 text1 = bio.text
 text1=text1.split("Report")[0]
-driver.save_screenshot(f"chicky001.png")
+driver.save_screenshot(f"image.png")
 time.sleep(random_number)
 like=driver.find_element(By.XPATH, '//*[@id="o-1868991261"]/div/div[1]/div/div/main/div/div/div[1]/div/div[3]/div/div[2]/button')
 like.click()
@@ -108,14 +108,14 @@ with open('bios.csv', 'w', newline='',encoding='utf-8') as csvfile:
     for i in range(500):
 
       time.sleep(2)
-      driver.save_screenshot(f"chickies/chicky{i}.png") #bios information
+      driver.save_screenshot(f"girl/image{i}.png") #bios information
       time.sleep(random_number)
       goddamnbutton=driver.find_element(By.XPATH, '//*[@id="o-1868991261"]/div/div[1]/div/div/main/div/div/div[1]/div/div[2]/div[3]/button')
       goddamnbutton.click()
       logging.info(f' {i}buton tamamlandi ')        
       time.sleep(random_number)
-      driver.save_screenshot(f"chickies/chicky{i}.png")
-      logging.info(f' chicky{i} kaydedildi ')
+      driver.save_screenshot(f"image/image{i}.png")
+      logging.info(f' image{i} kaydedildi ')
       try:
         information = driver.find_element(By.XPATH, '//*[@id="o-1868991261"]/div/div[1]/div/div/main/div/div[1]/div[1]/div/div[2]/div[2]/div')
         bio = information.text  #bios information
